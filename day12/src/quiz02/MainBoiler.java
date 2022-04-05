@@ -33,12 +33,7 @@ public static void main(String[] args) {
 				bo.ondol();
 				break;
 			case 5 :
-				System.out.println("예약 온도 입력 :");
-				reserTemp = input.nextInt();
-				System.out.println("예약 시간 입력 :");
-				time = input.nextInt();
-				System.out.println("지속 시간 입력 :");
-				lastTime = input.nextInt();
+				
 				
 				break;
 			case 6 :
