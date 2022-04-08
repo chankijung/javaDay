@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/java,eclipse,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=java,eclipse,windows
+# Created by https://www.toptal.com/developers/gitignore/api/java,eclipse,windows,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,eclipse,windows,visualstudiocode
 
 ### Eclipse ###
 .metadata
@@ -14,7 +14,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-
+java_test
 # External tool builders
 .externalToolBuilders/
 
@@ -94,6 +94,27 @@ local.properties
 hs_err_pid*
 replay_pid*
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# Support for Project snippet scope
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -120,4 +141,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/java,eclipse,windows
+# End of https://www.toptal.com/developers/gitignore/api/java,eclipse,windows,visualstudiocode
