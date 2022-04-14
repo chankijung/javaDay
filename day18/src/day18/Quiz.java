@@ -7,6 +7,7 @@ import java.io.*;
 class Member implements Serializable{ //추가할것
 	private String stNum,stName,stJumsu;
 	private int kor,eng,math;
+	
 	public String getStNum() {return stNum;	}
 	public void setStNum(String stNum) {this.stNum = stNum;	}
 	public String getStName() {	return stName;	}
