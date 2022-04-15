@@ -204,12 +204,34 @@ public class DB {
 			result = ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
+			//System.out.println("아이디가 중복됐습니다");
 		}finally {
 			dbClose();
 		}
 		
 		return result;
 		
+	}
+	public int update(Member m) {
+		String sql =
+				"update newst set name =?, age =? where id=?";
+				//업데이트 성공 -1, 실패하면 0 또는 에러
+		int result=0;
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, m.getName());
+			ps.setInt(2, m.getAge());
+			ps.setString(3, m.getId());
+			
+			result = ps.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return result;
 	}
 	
 	

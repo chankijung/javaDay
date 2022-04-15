@@ -5,6 +5,12 @@ public class Member {
 	private String name;
 	private int age;
 	
+	public Member() {
+		//내용은 없지만 안쓰면 문법적 에러
+	}
+	public Member(String id, String name, int age) {
+		this.id=id; this.age=age; this.name=name;
+	}
 	public String getId() {
 		return id;
 	}

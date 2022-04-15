@@ -7,7 +7,7 @@ public class MainClass {
 	public static void main(String[] args) {
 		DB db = new DB();
 		int num, result =0 ;
-		String userId, userName;
+		String userId, userName; // id는 보통 수정못함
 		int userAge;
 		Scanner scan = new Scanner(System.in);
 		String inputId; //조회용 아이디
@@ -17,6 +17,7 @@ public class MainClass {
 			System.out.println("2. 개인 정보 보기");
 			System.out.println("3. 개인 정보 삭제");
 			System.out.println("4. 회원 가입");
+			System.out.println("5. 개인 정보 수정");
 			System.out.println(">>>> : ");
 			
 			num = scan.nextInt();
@@ -82,6 +83,28 @@ public class MainClass {
 				db.insert(userId, userName, userAge);
 				
 				break;
+				
+			case 5 :
+				System.out.println("수정 할 아이디 :");
+				userId = scan.next();
+				System.out.println("수정 할 이름 :");
+				userName = scan.next();
+				System.out.println("수정 할 나이 : ");
+				userAge = scan.nextInt();
+				
+				Member mem =
+						new Member(userId, userName, userAge);
+				//mem.setId(userId);
+				//mem.setName(userName);
+				//mem.setAge(userAge); -> 값을 받는 생성자로 바꾸면 코드를 줄인다
+				result =db.update(mem);
+				if(result==1) {
+					System.out.println("수정 성공!");
+				}else {
+					System.out.println("수정 실패");
+				}
+				break;
+				
 				
 				
 			}
